@@ -2,20 +2,18 @@ import fs from 'fs';
 import csv from 'csv-parser';
 
 function countCars(file) {
-    let count = 0;
-    fs.createReadStream(file)
-        .pipe(csv())
-        .on('data', () => {
-            count += 1;
-        })
-        .on('end', () => {
-            console.log(`Количество автомобилей: ${count}`);
-        });
+  let count = 0;
+  fs.createReadStream(file)
+    .pipe(csv())
+    .on('data', () => {
+      count += 1;
+    })
+    .on('end', () => {
+      console.log(`Количество автомобилей: ${count}`);
+    });
 }
 
-
 countCars('./__fixtures__/cars1.csv');
-
 
 function calculateAv(file) {
   let totalMileage = 0;
@@ -39,7 +37,6 @@ function calculateAv(file) {
 
 export default calculateAv;
 
-
 function findMaxPrice(file) {
   let maxPrice = 0;
 
@@ -58,7 +55,6 @@ function findMaxPrice(file) {
 
 findMaxPrice('__fixtures__/cars1.csv');
 
-
 function findOldestCar(file) {
   let oldestCar = { year: Infinity };
   fs.createReadStream(file)
@@ -75,7 +71,6 @@ function findOldestCar(file) {
 }
 
 findOldestCar('__fixtures__/cars1.csv');
-
 
 function countColors(file) {
   const colorCounts = {};
