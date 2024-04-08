@@ -1,0 +1,21 @@
+Марка,Модель,Год,Кузов,Пробег,Коробка,Топливо,Цена,Цвет
+Mazda,CX-5,2019,Sedan,20000,Automatic,Gasoline,25000,Red
+Toyota,Camry,2018,Sedan,18000,Automatic,Gasoline,22000,Black
+Honda,Civic,2020,Sedan,22000,Automatic,Gasoline,24000,White
+Nissan,Altima,2017,Sedan,15000,Automatic,Gasoline,18000,Gray
+Ford,Mustang,2021,Coupe,35000,Automatic,Gasoline,40000,Yellow
+Chevrolet,Silverado,2016,Pickup,25000,Automatic,Diesel,32000,Blue
+Jeep,Wrangler,2022,SUV,40000,Manual,Gasoline,45000,Green
+GMC,Sierra,2020,Pickup,30000,Automatic,Diesel,38000,Black
+Hyundai,Sonata,2019,Sedan,19000,Automatic,Gasoline,23000,Red
+Kia,Sorento,2017,SUV,22000,Automatic,Gasoline,20000,Gray
+Lexus,RX,2021,SUV,45000,Automatic,Hybrid,50000,White
+BMW,3 Series,2018,Sedan,28000,Automatic,Gasoline,28000,Black
+Mercedes-Benz,C-Class,2019,Sedan,32000,Automatic,Gasoline,32000,White
+Audi,A4,2020,Sedan,35000,Automatic,Gasoline,35000,Blue
+Subaru,Outback,2017,Wagon,20000,Automatic,Gasoline,22000,Red
+Volkswagen,Jetta,2015,Sedan,17000,Automatic,Gasoline,15000,Gray
+Volvo,XC60,2021,SUV,50000,Automatic,Gasoline,45000,White
+Mitsubishi,Outlander,2019,SUV,25000,Automatic,Gasoline,23000,Blue
+Mitsubishi,Eclipse Cross,2020,SUV,23000,Automatic,Gasoline,22000,White
+Porsche,Cayenne,2021,SUV,85000,Automatic,Gasoline,85000,Black
