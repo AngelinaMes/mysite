@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/hexlet-college-students/l3-data-analyzing-v4#readme",
   "dependencies": {
+    "csv-parser": "^3.0.0",
+    "fs": "^0.0.1-security",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
