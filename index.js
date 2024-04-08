@@ -3,7 +3,7 @@ import csv from 'csv-parser';
 
 // function countCars(file) {
 // let count = 0;
-// fs.createReadStream(file)
+// fs.createReadStream(__fixtures__/cars1.csv)
 // .pipe(csv())
 // .on('data', () => {
 // count += 1;
@@ -19,7 +19,7 @@ import csv from 'csv-parser';
 // let totalMileage = 0;
 // let carCount = 0;
 
-// fs.createReadStream(file)
+// fs.createReadStream(__fixtures__/cars1.csv)
 // .pipe(csv())
 // .on('data', (row) => {
 // totalMileage += parseInt(row.mileage, 10);
@@ -35,7 +35,7 @@ import csv from 'csv-parser';
 
 // let maxPrice = 0;
 
-// fs.createReadStream('path/to/cars1.csv')
+// fs.createReadStream('__fixtures__/cars1.csv')
 // .pipe(csv())
 // .on('data', (row) => {
 // const price = parseFloat(row.price);
@@ -62,3 +62,21 @@ fs.createReadStream('__fixtures__/cars1.csv')
   .on('end', () => {
     console.log(`Самый старый автомобиль: ${carWithEarliestYear}`);
   });
+
+
+const colorsCount = {};
+
+fs.createReadStream('__fixtures__/cars1.csv')
+    .pipe(csv())
+    .on('data', (row) => {
+        const color = row.color;
+        colorsCount[color] = (colorsCount[color] || 0) + 1;
+    })
+    .on('end', () => {
+        let result = '';
+        for (const color in colorsCount) {
+            result += `${color}: ${colorsCount[color]}, `;
+        }
+        result = result.slice(0, -2);
+        console.log(`Все цвета: ${result}`);
+    });
