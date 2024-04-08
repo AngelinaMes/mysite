@@ -33,16 +33,32 @@ import csv from 'csv-parser';
 
 // export default calculateAv;
 
-let maxPrice = 0;
+// let maxPrice = 0;
 
-fs.createReadStream('path/to/cars1.csv')
+// fs.createReadStream('path/to/cars1.csv')
+// .pipe(csv())
+// .on('data', (row) => {
+// const price = parseFloat(row.price);
+// if (price > maxPrice) {
+// maxPrice = price;
+// }
+// })
+// .on('end', () => {
+// console.log(`Стоимость самой дорогой машины: ${maxPrice}`);
+// });
+
+let earliestYear = Infinity;
+let carWithEarliestYear = '';
+
+fs.createReadStream('__fixtures__/cars1.csv')
   .pipe(csv())
   .on('data', (row) => {
-    const price = parseFloat(row.price);
-    if (price > maxPrice) {
-      maxPrice = price;
+    const year = parseInt(row.year, 10);
+    if (year < earliestYear) {
+      earliestYear = year;
+      carWithEarliestYear = `${row.brand} ${row.model}`;
     }
   })
   .on('end', () => {
-    console.log(`Стоимость самой дорогой машины: ${maxPrice}`);
+    console.log(`Самый старый автомобиль: ${carWithEarliestYear}`);
   });
