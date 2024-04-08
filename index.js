@@ -1,6 +1,6 @@
-import _ from 'lodash';
+import fs from 'fs';
 
-import { showInfo } from '../index.js';
+import csv from 'csv-parser';
 
 
 function count(file) {
@@ -15,4 +15,4 @@ function count(file) {
         });
 }
 
-
+export default count;
